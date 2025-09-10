@@ -1,0 +1,142 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+#v0-built-with-button-3ffb031b-127f-4d57-bef4-007c26d165d7,
+[id^="v0-built-with-button-"] {
+  display: none !important;
+}
+
+
+:root {
+  /* Updated to industrial engineering color scheme with steel blues and grays */
+  --background: oklch(0.99 0 0); /* Off-white background for softer look */
+  --foreground: oklch(0.15 0.02 240); /* Deep steel blue-gray text (#1e293b) */
+  --card: oklch(0.98 0.005 240); /* Very light steel blue card background */
+  --card-foreground: oklch(0.35 0.02 240); /* Medium steel blue card text */
+  --popover: oklch(0.99 0 0); /* Off-white popover background */
+  --popover-foreground: oklch(0.15 0.02 240); /* Deep steel blue popover text */
+  --primary: oklch(0.25 0.08 220); /* Industrial steel blue primary (#1e40af) */
+  --primary-foreground: oklch(0.99 0 0); /* Off-white text on primary */
+  --secondary: oklch(0.45 0.03 240); /* Medium steel gray secondary */
+  --secondary-foreground: oklch(0.99 0 0); /* Off-white text on secondary */
+  --muted: oklch(0.96 0.01 240); /* Light steel gray muted */
+  --muted-foreground: oklch(0.4 0.02 240); /* Medium steel gray muted text */
+  --accent: oklch(0.55 0.12 200); /* Industrial teal accent (#0891b2) */
+  --accent-foreground: oklch(0.99 0 0); /* Off-white text on accent */
+  --destructive: oklch(0.55 0.22 25); /* Industrial red destructive */
+  --destructive-foreground: oklch(0.99 0 0); /* Off-white text on destructive */
+  --border: oklch(0.88 0.01 240); /* Light steel border */
+  --input: oklch(0.97 0.005 240); /* Light steel input background */
+  --ring: oklch(0.55 0.12 200); /* Industrial teal ring color */
+  --chart-1: oklch(0.45 0.15 220); /* Steel blue chart */
+  --chart-2: oklch(0.55 0.12 200); /* Teal chart */
+  --chart-3: oklch(0.35 0.08 240); /* Dark steel chart */
+  --chart-4: oklch(0.6 0.15 60); /* Industrial orange chart */
+  --chart-5: oklch(0.5 0.1 180); /* Steel cyan chart */
+  --radius: 0.5rem;
+  --sidebar: oklch(0.96 0.01 240); /* Light steel sidebar */
+  --sidebar-foreground: oklch(0.15 0.02 240); /* Deep steel sidebar text */
+  --sidebar-primary: oklch(0.25 0.08 220); /* Steel blue sidebar primary */
+  --sidebar-primary-foreground: oklch(0.99 0 0); /* Off-white sidebar primary text */
+  --sidebar-accent: oklch(0.55 0.12 200); /* Teal sidebar accent */
+  --sidebar-accent-foreground: oklch(0.99 0 0); /* Off-white sidebar accent text */
+  --sidebar-border: oklch(0.88 0.01 240); /* Light steel sidebar border */
+  --sidebar-ring: oklch(0.55 0.12 200); /* Teal sidebar ring */
+}
+
+.dark {
+  /* Enhanced dark mode with proper industrial steel blue theme */
+  --background: oklch(0.08 0.01 240); /* Very dark steel blue background */
+  --foreground: oklch(0.92 0.01 240); /* Light steel blue-gray text */
+  --card: oklch(0.12 0.01 240); /* Dark steel blue card background */
+  --card-foreground: oklch(0.88 0.01 240); /* Light steel card text */
+  --popover: oklch(0.1 0.01 240); /* Dark steel popover background */
+  --popover-foreground: oklch(0.9 0.01 240); /* Light steel popover text */
+  --primary: oklch(0.6 0.12 200); /* Bright teal primary for contrast */
+  --primary-foreground: oklch(0.08 0.01 240); /* Dark steel text on primary */
+  --secondary: oklch(0.2 0.02 240); /* Dark steel secondary */
+  --secondary-foreground: oklch(0.9 0.01 240); /* Light steel text on secondary */
+  --muted: oklch(0.18 0.01 240); /* Dark steel muted */
+  --muted-foreground: oklch(0.65 0.01 240); /* Medium steel muted text */
+  --accent: oklch(0.65 0.15 200); /* Bright teal accent */
+  --accent-foreground: oklch(0.08 0.01 240); /* Dark steel text on accent */
+  --destructive: oklch(0.6 0.2 25); /* Bright red destructive */
+  --destructive-foreground: oklch(0.08 0.01 240); /* Dark steel text on destructive */
+  --border: oklch(0.25 0.01 240); /* Medium steel border */
+  --input: oklch(0.15 0.01 240); /* Dark steel input background */
+  --ring: oklch(0.65 0.15 200); /* Bright teal ring */
+  --chart-1: oklch(0.6 0.15 220); /* Bright steel blue chart */
+  --chart-2: oklch(0.65 0.15 200); /* Bright teal chart */
+  --chart-3: oklch(0.7 0.12 180); /* Bright cyan chart */
+  --chart-4: oklch(0.7 0.18 60); /* Bright orange chart */
+  --chart-5: oklch(0.55 0.12 300); /* Purple chart */
+  --sidebar: oklch(0.1 0.01 240); /* Dark steel sidebar */
+  --sidebar-foreground: oklch(0.9 0.01 240); /* Light steel sidebar text */
+  --sidebar-primary: oklch(0.6 0.12 200); /* Bright teal sidebar primary */
+  --sidebar-primary-foreground: oklch(0.08 0.01 240); /* Dark steel sidebar primary text */
+  --sidebar-accent: oklch(0.2 0.02 240); /* Dark steel sidebar accent */
+  --sidebar-accent-foreground: oklch(0.9 0.01 240); /* Light steel sidebar accent text */
+  --sidebar-border: oklch(0.25 0.01 240); /* Medium steel sidebar border */
+  --sidebar-ring: oklch(0.4 0.02 240); /* Medium steel sidebar ring */
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+/* Container Configuration */
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Ensure full width layouts */
+.full-width {
+  @apply w-full;
+}
