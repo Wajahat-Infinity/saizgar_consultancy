@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-^%==vtp=9z6t18wl*u3a+y@#p^a-^7a)jds$%#i@yphqxvpxaz'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['13.49.178.174', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['*']  # Allow all hosts for IP-only deployment
 
 
 # Application definition
@@ -156,14 +156,9 @@ SPECTACULAR_SETTINGS = {
     'VERSION': '1.0.0',
 }
 
-# CORS
+# CORS - Allow all origins for IP-only deployment
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-    "http://127.0.0.1:3000",
-    "http://13.49.178.174:3000",
-]
 
 # Email (dev defaults; override in production)
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
