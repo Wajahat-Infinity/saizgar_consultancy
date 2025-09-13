@@ -39,7 +39,7 @@ type Project = {
   end_date?: string
 }
 
-const API_BASE = process.env.NEXT_PUBLIC_API_BASE || "http://localhost:8000"
+const API_BASE = process.env.NEXT_PUBLIC_API_BASE || "http://13.49.178.174:8000"
 
 const iconMap: { [key: string]: any } = {
   Zap,

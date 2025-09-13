@@ -25,7 +25,7 @@ type ApiService = {
   description?: string
 }
 
-const API_BASE = process.env.NEXT_PUBLIC_API_BASE || "http://localhost:8000"
+const API_BASE = process.env.NEXT_PUBLIC_API_BASE || "http://13.49.178.174:8000"
 
 export function ServicesGrid() {
   const [services, setServices] = useState<ApiService[]>([])

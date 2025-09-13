@@ -16,11 +16,29 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.http import JsonResponse
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 from django.conf import settings
 from django.conf.urls.static import static
 
+def api_root(request):
+    return JsonResponse({
+        'message': 'Saizgar Engineering Consultancy API',
+        'version': '1.0.0',
+        'docs': '/api/docs/',
+        'admin': '/admin/',
+        'endpoints': {
+            'settings': '/api/settings/',
+            'services': '/api/services/',
+            'projects': '/api/projects/',
+            'sectors': '/api/sectors/',
+            'team': '/api/team/',
+            'testimonials': '/api/testimonials/',
+        }
+    })
+
 urlpatterns = [
+    path('', api_root, name='api-root'),
     path('admin/', admin.site.urls),
     # API schema and docs
     path('api/schema/', SpectacularAPIView.as_view(), name='schema'),

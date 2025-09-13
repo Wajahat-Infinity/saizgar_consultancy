@@ -25,13 +25,13 @@ SECRET_KEY = 'django-insecure-^%==vtp=9z6t18wl*u3a+y@#p^a-^7a)jds$%#i@yphqxvpxaz
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['13.49.178.174', 'localhost', '127.0.0.1']
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'jazzmin',
+    # 'jazzmin',  # Not compatible with Python 3.13
     'django.contrib.admin',  
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -159,6 +159,11 @@ SPECTACULAR_SETTINGS = {
 # CORS
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+    "http://13.49.178.174:3000",
+]
 
 # Email (dev defaults; override in production)
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

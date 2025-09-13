@@ -9,7 +9,7 @@ import { CheckCircle, Users, Award, Globe, ArrowRight } from "lucide-react"
 import { useEffect, useState } from "react"
 
 type WhyChooseItem = { id: number; title: string; description?: string }
-const API_BASE = process.env.NEXT_PUBLIC_API_BASE || "http://localhost:8000"
+const API_BASE = process.env.NEXT_PUBLIC_API_BASE || "http://13.49.178.174:8000"
 
 export default function ServicesPage() {
   const [whyChoose, setWhyChoose] = useState<WhyChooseItem[]>([])
